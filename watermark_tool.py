@@ -66,7 +66,7 @@ def add_watermark(img_path, text, font_size, color, position, out_path):
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     watermarked.save(out_path)
 
-if __name__ == "__main__":
+def main():
     args = parse_args()
     print(f"图片目录: {args.img_dir}")
     print(f"字体大小: {args.font_size}")
@@ -85,3 +85,6 @@ if __name__ == "__main__":
             print(f"  已保存: {out_path}")
         else:
             print("  未找到拍摄日期 exif 信息，跳过水印")
+
+if __name__ == "__main__":
+    main()
